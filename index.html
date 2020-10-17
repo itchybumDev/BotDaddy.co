@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>BotDaddy.co</title>
+    <meta name="description" content="BotDaddy.co designs, implements and optimizes chat and voice bots for global companies">
+    <meta name="author" content="BotDaddy.co">
+    <link rel="canonical" href="https://BotDaddy.co/" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BotDaddy.co - Fully integrated AI driven ChatBots" />
+    <meta property="og:description" content="BotDaddy.co specializes in driving business goals through AI driven ChatBots for global brands and in integrating ChatBots in the total customer journey." />
+    <meta property="og:url" content="https://BotDaddy.co/" />
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fbmessenger.css">
+
+    <style>
+        .filter-blue {
+            filter: invert(39%) sepia(3%) saturate(7454%) hue-rotate(175deg) brightness(97%) contrast(108%);
+        }
+       .feature.map {
+            height:100%;
+            iframe {
+                height:100%;
+                width:100%;
+                border:0;
+                filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+                filter: gray; /* IE6-9 */
+                -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+                -webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+            }
+        }
+        /* Create four equal columns that sits next to each other */
+        .col-img {
+            flex: 25%;
+            max-width: 25%;
+            padding: 20px;
+            border:1px solid #ecf1f4;
+            display:block;
+            margin:-1px -1px 0 0;
+        }
+
+        .col-img img {
+            margin-top: 8px;
+            vertical-align: middle;
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+            -webkit-transition: 0.6s ease;
+            transition: 0.6s ease;
+        }
+
+        .col-img img:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -webkit-transition: 0.6s ease;
+            transition: 0.6s ease;
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .col-img {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .col-img {
+                /* flex: 100%; */
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <!-- script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- clock
+    ================================================== -->
+    <script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        m = checkTime(m);
+        document.getElementById('jsm-clock').innerHTML = h + ":" + m;
+        var t = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+	</script>
+
+	<!-- Google Analytics
+    =================================================== -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74385124-1"></script>
+		<script>
+ 			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'UA-74385124-1');
+	</script>
+    <!-- End Google Analytics -->
+
+	<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W5M9P9');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5M9P9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+	<!-- End Google Tag Manager -->
+
+
+    <!-- Cookie stuff
+    =================================================-->
+    <link rel="stylesheet" type="text/css" href="css/cookieconsent.min.css" />
+    <script src="js/cookieconsent.js"></script>
+
+    <script>
+    window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+            "background": "#ebebeb",
+            "text": "#000"
+            },
+            "button": {
+            "background": "#3866a2"
+            }
+        },
+        "theme": "classic",
+        "position": "bottom-left",
+
+        "type": "opt-in",
+        "content": {
+            "href": "https://BotDaddy.co/cookies/"
+        },
+
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                console.log("consent previously given");
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                console.log("consent previously denied");
+            }
+        },
+
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                console.log("consent given");
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                console.log("consent revoked");
+            }
+        },
+
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                console.log("consent active revoked");
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                console.log("consent active allowed");
+            }
+        },
+    })});
+    </script>
+
+
+    <!-- header
+   ================================================== -->
+   <header id="header" class="row">
+
+   		<div class="header-logo">
+	        <a href="index.html">BotDaddy.co</a>
+	    </div>
+
+	   	<nav id="header-nav-wrap">
+			<ul class="header-main-nav">
+				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">Chatbots</a></li>
+<!-- 				<li><a class="smoothscroll"  href="#jobs" title="jobs">Jobs</a></li>
+				<li><a class="smoothscroll"  href="#team" title="team">Team</a></li> -->
+				<li><a class="smoothscroll"  href="#maps" title="contact">Contact</a></li>
+			</ul>
+
+            <a href="mailto:BotDaddy.co@gmail.com?subject=Information request via website" title="sign-up" class="button button-primary cta">Message us</a>
+		</nav>
+
+		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+   </header> <!-- /header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000>
+
+        <div class="overlay"></div>
+        <div class="home-content">
+
+            <div class="row contents">
+                <div class="home-content-left">
+
+                    <h1 data-aos="fade-up">
+                        We design, build and optimize
+                        chatbots & voicebots
+                        for global brands.
+                    </h1>
+
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#about" class="smoothscroll button stroke">
+                            Read more
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="home-image-right">
+                    <div class="vcenter">
+                        <div class="iphone-wrapper">
+                            <img alt="iPhone 6 white" src="images/iphone-app-940.png" />
+                            <div class="screen-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <!-- end home-social-list -->
+
+        <div class="home-scrolldown">
+            <a href="#about" class="scroll-icon smoothscroll">
+                <span>Scroll Down</span>
+            </a>
+        </div>
+
+    </section> <!-- end home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about">
+        <div class="row about-intro">
+
+            <div class="col-four">
+                <h1 class="intro-header" data-aos="fade-up">Why chatbots?</h1>
+            </div>
+            <div class="col-eight">
+                <p class="lead" data-aos="fade-up">
+                    We believe conversational commerce offers unparalleled opportunities to engage 1-on-1 with your customers in a very natural way, whether it is via chatbots or voice enabled bots. Within BotDaddy.co we have strong backgrounds in performance based marketing, customer care and technology design.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row about-features">
+
+            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="filter-blue"><img src="./images/icons/megaphone.svg" alt="megaphone" srcset="./images/icons/megaphone.svg" width="50px" height="50px"></span>
+
+                    <div class="service-content">
+
+                        <h3>Reach billions of people</h3>
+
+                        <p>More than 1.2 billion people chat every day. Consumers use Facebook Messenger, WeChat, WhatsApp and many other platforms to talk with brands.
+                        </p>
+
+                    </div>
+
+                    </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="filter-blue"><img src="./images/icons/chat.svg" alt="chat" srcset="./images/icons/chat.svg" width="50px" height="50px"></span>
+
+                    <div class="service-content">
+                        <h3>Have 1-1 personal conversations</h3>
+
+                        <p>Brands have a unique opportunity to have personalized conversations through messaging platforms.
+                        </p>
+
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="filter-blue"><img src="./images/icons/dollar.svg" alt="dollar" srcset="./images/icons/dollar.svg" width="50px" height="50px"></span>
+
+
+                    <div class="service-content">
+                        <h3>Drive conversion & sales</h3>
+
+                        <p>With chatbot technology you can leverage the conversation to drive conversion and sales.
+                        </p>
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                    <div class="bgrid feature" data-aos="fade-up">
+
+                        <span class="filter-blue"><img src="./images/icons/conversation.svg" alt="conversation" srcset="./images/icons/conversation.svg" width="50px" height="50px"></span>
+
+
+                    <div class="service-content">
+                        <h3>Conversational Strategy</h3>
+
+                        <p>We start with a strategy that fits with your business goals.
+                        </p>
+
+                    </div>
+
+                    </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="filter-blue"><img src="./images/icons/gear.svg" alt="gear" srcset="./images/icons/gear.svg" width="50px" height="50px"></span>
+
+
+                    <div class="service-content">
+                        <h3>Bespoke bot building</h3>
+
+                        <p>We design, build & optimize custom made bots with AI, NLP and even AR.
+                        </p>
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="filter-blue"><img src="./images/icons/connect.svg" alt="connect" srcset="./images/icons/connect.svg" width="50px" height="50px"></span>
+
+
+                    <div class="service-content">
+                        <h3>Integration in your digital journey</h3>
+
+                        <p>We create a bot that connects right with your digital future.
+                        </p>
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+            </div> <!-- end features-list -->
+
+        </div> <!-- end about-features -->
+
+        <div class="row about-how">
+
+            <h1 class="intro-header" data-aos="fade-up">How we work</h1>
+
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps block-1-2 block-tab-full group">
+
+                    <div class="bgrid step" data-item="1">
+                        <h3>Strategy</h3>
+                        <p>We always start with the question: "What problem are you going to solve for your end consumer?". On basis of this we create a conversational commerce strategy and define business objectives.
+                    </div>
+
+                    <div class="bgrid step" data-item="2">
+                        <h3>Design</h3>
+                        <p>We design a custom flow of the bot and select the most suitable messaging platform. This can be a custom-built platform, Facebook Messenger, WeChat, WhatsApp, Google Assistant, Amazon Alexa or any other voice or chat platform.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="3">
+                        <h3>Development</h3>
+                        <p>We create and develop the bot. All our chat & voice bots are powered with the BotDaddy.co multi-lingual NLP and AI which supports many languages. Our bots are privacy by design and adhere to the strict EU privacy guidelines.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="4">
+                        <h3>Optimization</h3>
+                        <p>We launch and push the bot live. Consumers engage and converse with the bot. Based on customer feedback and data, we continue to optimize, increase conversation and keep growing your conversational channel.
+                        </p>
+                    </div>
+
+                </div>
+           </div> <!-- end about-how-content -->
+
+        </div> <!-- end about-how -->
+
+<!-- s -->
+
+    </section> <!-- end about -->
+
+
+    <!-- pricing
+    ================================================== -->
+    <!-- <section id="jobs">
+        <div class="row jobs-content">
+
+            <div class="col-four jobs-intro">
+                <h1 class="intro-header" data-aos="fade-up">Join our team!</h1>
+
+                <p data-aos="fade-up">
+                Are you ready to join a fast growing company? We are always looking for talent to join our team.
+                <br>
+                We have offices in Amsterdam, the Netherlands and Ho Chi Minh, Vietnam. Our cultural values are open, responsible, transparent, honest. Both internal and external. Want to join our team?
+                </p>
+            </div>
+
+            <div class="col-eight jobs-table">
+                <div class="row">
+
+                    <div class="col-six plan-wrap">
+                        <div class="plan-block" data-aos="fade-up">
+
+                            <div class="plan-top-part">
+                                <h3 class="plan-block-title">Chat & Voice Bot Consultant</h3>
+                                <p class="plan-block-price">APAC</p>
+                                <p class="plan-block-per">Ho Chi Minh</p>
+                            </div>
+
+                            <div class="plan-bottom-part">
+                                <ul class="plan-block-features">
+                                    <li><span>Location:</span> Ho Chi Minh City, Vietnam</li>
+                                    <li>Own client projects from start to finish</li>
+                                    <li>Chat bot expert</li>
+                                    <li>Super Project Manager</li>
+                                    <li><a href="files/Chat%20&%20Voicebot%20Consultant%20APAC.pdf" target="_blank">Full job description</a></li>
+                                </ul>
+
+                                <a class="button button-primary large" href="mailto:BotDaddy.co@gmail.com?subject=Application via website&body=Please include all relevant information and your resume.">Apply here</a>
+                            </div>
+
+                        </div>
+                    </div> 
+
+                    <div class="col-six plan-wrap">
+                        <div class="plan-block primary" data-aos="fade-up">
+
+                            <div class="plan-top-part">
+                                <h3 class="plan-block-title">Chat & Voice Bot Consultant</h3>
+                                <p class="plan-block-price">EMEA</p>
+                                <p class="plan-block-per">Amsterdam</p>
+                            </div>
+
+                            <div class="plan-bottom-part">
+                                <ul class="plan-block-features">
+                                    <li><span>Location:</span> Amsterdam, the Netherlands</li>
+                                    <li>Own client projects from start to finish</li>
+                                    <li>Chat bot expert</li>
+                                    <li>Super Project Manager</li>
+                                    <li><a href="files/Chat%20&%20Voicebot%20Consultant%20EMEA.pdf" target="_blank">Full job description</a></li>
+                                </ul>
+
+                                <a class="button button-primary large" href="mailto:BotDaddy.co@gmail.com?subject=Application via website&body=Please include all relevant information and your resume.">Apply here</a>
+                            </div>
+
+                        </div>
+                    </div>  end plan-wrap 
+
+                </div>
+            </div>  end jobs-table 
+
+        </div>  end jobs-content 
+    </section>  end jobs  -->
+
+    <!-- Team section
+    ================================================== -->
+    <!-- <section id="team" class="section">
+        <div class="row>
+            <div class="col-twelve">
+                <h1 class="intro-header">Our Management Team</h1>
+                <p class="section-subtitle">Specialists in conversational commerce</p>
+            </div>
+        </div>
+
+        <style>
+
+        #f1_card {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.0s linear;
+        }
+        #f1_card:hover {
+            transform: rotateY(180deg);
+            box-shadow: -5px 5px 5px #aaa;
+        }
+        #f2_card {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.0s linear;
+        }
+        #f2_card:hover {
+            transform: rotateY(180deg);
+            box-shadow: -5px 5px 5px #aaa;
+        }
+        #f3_card {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.0s linear;
+        }
+        #f3_card:hover {
+            transform: rotateY(180deg);
+            box-shadow: -5px 5px 5px #aaa;
+        }
+        .face {
+            //position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .face.back {
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            background-color: #aaa;
+            position: absolute;
+            top:0px;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 350px) {
+            #f1_card:hover {
+                transform: none;
+                //box-shadow: -5px 5px 5px #aaa;
+            }
+            .face.back {
+                display: none;
+            }
+        }
+        </style>
+
+        <div class="row">
+            <div class="col-four plan-wrap">
+                <div class="single-team">
+                    <div id="f1_card" class="shadow">
+                        <div class="front face">
+                            <img src="images/team/team1.jpg" alt="">
+                            <div class="team-details">
+                                <div class="team-inner">
+                                    <h4 class="team-title">Sander van der Kraan</h4>
+                                    <p>Chief Strategy Officer</p>
+                                    <ul class="social-list">
+                                        <li class="facebook"><a href="https://www.facebook.com/Conversed/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/sandervanderkraan/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back face center">
+                            <p>
+                            <b>Sander van der Kraan</b> is a serial entrepreneur with a passion for data-driven marketing & marketing technology. He is currently active as Chief Strategy Officer of BotDaddy.co, and Managing Partner of Pervorm. As Chief Strategy Officer Sander drives the conversational strategy for BotDaddy.co clients and is a trusted advisor for CMO’s around the world. Sander is proud father of two young girls and spends his free time exploring the world with them.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-four plan-wrap">
+                <div class="single-team">
+                    <div id="f2_card" class="shadow">
+                        <div class="front face">
+                            <img src="images/team/team2.jpg" alt="">
+                            <div class="team-details">
+                                <div class="team-inner">
+                                    <h4 class="team-title">Arnold Ligtvoet</h4>
+                                    <p>Chief Technology Officer</p>
+                                    <ul class="social-list">
+                                        <li class="facebook"><a href="https://www.facebook.com/Conversed/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/arnoldligtvoet/"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back face center">
+                            <p>
+                            <b>Arnold Ligtvoet</b> is a serial entrepreneur who is passionate about working with technically complex products and services in emerging markets. He has a combined experience of 25 years in management, product development, portfolio management and has started three companies. Arnold is currently devoted to building the best possible technology as Chief Technology Officer of BotDaddy.co. Arnold is a active cyclist and volunteers each year in the Word Human Powered Speed Challenge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-four plan-wrap">
+                <div class="single-team">
+                    <div id="f3_card" class="shadow">
+                        <div class="front face">
+                            <img src="images/team/team3.jpg" alt="">
+                            <div class="team-details">
+                                <div class="team-inner">
+                                    <h4 class="team-title">Sagar Boers</h4>
+                                    <p>Director APAC</p>
+                                    <ul class="social-list">
+                                        <li class="facebook"><a href="https://www.facebook.com/Conversed/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="linkedin"><a href="https://www.linkedin.com/in/sagarboers/"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back face center">
+                            <p>
+                            <b>Sagar Boers</b> heads up the BotDaddy.co APAC operation as Account Director. He is one of the most knowledgeable Conversational Commerce specialist in the region and is responsible for the success of clients such as Friso, Huggies and Akzo Nobel. Sagar enjoys sports & attempts to learn Vietnamese.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+     --><!-- end team -->
+
+
+    <!-- maps
+    ================================================== -->
+    <section id="maps">
+        <iframe src="https://snazzymaps.com/embed/268278" width="100%" height="600p" style="border:none;"></iframe>
+    </section> <!-- end maps -->
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="footer-main">
+            <div class="row">
+
+                <div class="col-three md-1-3 tab-full footer-info">
+
+                    <div class="footer-logo">
+
+                    </div>
+
+                    <p>
+                    BotDaddy.co specializes in driving business goals for global brands through AI driven chatbots. We help our clients define their strategy for Facebook Messenger, Skype, Telegram, Kik, Zalo and all other chat platforms and we build the chatbot equipped to realize this strategy. After having defined the right strategy and having built the chatbot, we execute the defined chat platform strategy for our clients with an optimal Return On Investment.
+                    </p>
+
+<!--                     <ul class="footer-social-list">
+                        <li>
+                            <a href="https://www.facebook.com/Conversed/"><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/conversed/"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                         <li>
+                            <a href="https://medium.com/@BotDaddy.co"><i class="fab fa-medium"></i></a>
+                        </li>
+                    </ul> -->
+
+
+                </div> <!-- end footer-info -->
+
+                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
+
+                    <h4>BotDaddy.co HQ</h4>
+
+                    <p>
+                    39 Gardiner Street Upper<br>
+                    Dublin 2<br>
+                    Ireland<br>
+                    </p>
+
+                    <p>
+                    <a href="mailto:BotDaddy.co@gmail.com">BotDaddy.co@gmail.com</a> <br>
+                    Phone: +353 0851708986 <br>
+                    </p>
+
+                </div> <!-- end footer-contact -->
+
+                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
+
+                    <h4>BotDaddy.co APAC</h4>
+
+                    <p>
+                    115 Onan Road<br>
+					Singapore<br>
+                    </p>
+
+                    <p>
+                    <a href="mailto:BotDaddy.co@gmail.com">BotDaddy.co@gmail.com</a> <br>
+                    Phone/Whatsapp/Telegram: +65 8679 2201 <br>
+                    </p>
+
+                </div> <!-- end footer-contact -->
+
+                <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
+
+                    <h4>Site Links</h4>
+
+                    <ul class="list-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Chatbots</a></li>
+                        <li><a href="#maps">Contact</a></li>
+<!--                         <li><a href="facebook-privacy-policy-for-conversed-ai/index.html">Privacy Policy</a></li>
+                        <li><a href="cookies/index.html">Cookie Policy</a></li> -->
+                    </ul>
+
+                </div> <!-- end footer-site-links -->
+
+
+
+            </div> <!-- /row -->
+        </div> <!-- end footer-main -->
+
+    <div class="footer-bottom">
+
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		            <span>© Copyright BotDaddy.co 2018-2020</span>
+		         </div>
+
+		         <div id="go-top">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
+		         </div>
+	      	</div>
+
+      	</div> <!-- end footer-bottom -->
+
+    </div>
+
+    </footer>
+
+    <div id="preloader">
+    	<div id="loader"></div>
+    </div>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery.fbmessenger.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
