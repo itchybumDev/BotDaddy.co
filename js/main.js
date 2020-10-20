@@ -8,7 +8,7 @@
 	"use strict";
 
 	var cfg = {		
-		scrollDuration : 100, // smoothscroll duration
+		scrollDuration : 800, // smoothscroll duration
 		mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
 	},	
 
@@ -30,7 +30,7 @@
 			$('html, body').animate({ scrollTop: 0 }, 'normal');
 
          // will fade out the whole preloader DIV that covers the website.
-	      $("#preloader").delay(100).fadeOut('slow');
+	      $("#preloader").delay(500).fadeOut('slow');
 	  
 	  	});
 	};
@@ -169,9 +169,9 @@
 
 		AOS.init( {
       	offset: 200,
-      	duration: 300,
+      	duration: 600,
       	easing: 'ease-in-sine',
-      	delay: 100,
+      	delay: 300,
 			once: true,
 			disable: 'mobile'
     	});
