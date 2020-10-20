@@ -270,7 +270,7 @@
 		.fbMessenger('start', { delay: 4000 })
 		.fbMessenger('message', 'user', 'Get Started', { delay: 250 })
 		.fbMessenger('typingIndicator', { delay: 250 })
-		.fbMessenger('message', 'bot', 'Welcome at BotDaddy.co. We design, build and optimize chat and voice bots for global brands.', { delay: 1500 })
+		.fbMessenger('message', 'bot', 'Welcome at BotDaddy.co. We Plan, Design, Build, and Deploy chatbots for Telegram, Facebook, Skype', { delay: 1500 })
 		.fbMessenger('message', 'bot', 'Would you like to know more?', { delay: 1500 })
 		.fbMessenger('showQuickReplies', [ 'Yes!', 'No...' ], { delay: 1000 })
 		.fbMessenger('selectQuickReply', 0, { delay: 2000 })
@@ -278,7 +278,7 @@
 		// .fbMessenger('imageAttachment', 'bot', 'images/gifs/200.gif', { delay: 1000, height:40, padding:40 })
 		.fbMessenger('message', 'user', 'What sort of bots do you build?', { delay: 250 })
 		.fbMessenger('typingIndicator', { delay: 2250 })
-		.fbMessenger('message', 'bot', 'We can build bots for all sorts of markets and on most common platforms. We support voice & text bots and can deliver fully secure and compliant solutions.', { delay: 1500 })
+		.fbMessenger('message', 'bot', 'We can build bots for Telegram, Facebook, Skype and your customized website. We support text bots and can deliver fully secure and compliant solutions.', { delay: 1500 })
 		.fbMessenger('message', 'bot', 'Scroll down to read more about us and our bots and feel free to contact us at BotDaddy.co@gmail.com', { delay: 1500 })
 		.fbMessenger('message', 'user', 'Great!', { delay: 1250 })
 		
