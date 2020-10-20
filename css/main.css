@@ -1336,9 +1336,9 @@ h1.intro-header::before {
 
 @media only screen and (max-width: 768px) {
   .header-logo a {
-    width: 222px;
-    height: 39px;
-    background-size: 222px 39px;
+    width: 150px;
+    height: 60px;
+    background-size: 150px 60px;
   }
   #header-nav-wrap {
     display: none;
