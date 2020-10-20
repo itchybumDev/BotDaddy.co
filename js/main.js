@@ -270,7 +270,7 @@
 		.fbMessenger('start', { delay: 4000 })
 		.fbMessenger('message', 'user', 'Get Started', { delay: 250 })
 		.fbMessenger('typingIndicator', { delay: 250 })
-		.fbMessenger('message', 'bot', 'Welcome at BotDaddy.co. We Plan, Design, Build, and Deploy chatbots for Telegram, Facebook, Skype', { delay: 1500 })
+		.fbMessenger('message', 'bot', 'Welcome at BotDaddy.co. We plan, design, build, and deploy chatbots', { delay: 1500 })
 		.fbMessenger('message', 'bot', 'Would you like to know more?', { delay: 1500 })
 		.fbMessenger('showQuickReplies', [ 'Yes!', 'No...' ], { delay: 1000 })
 		.fbMessenger('selectQuickReply', 0, { delay: 2000 })
